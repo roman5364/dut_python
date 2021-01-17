@@ -1,6 +1,4 @@
 import pygame
-from pygame.locals import *
-# install first from the lick https://www.pygame.org/download.shtml
 
 pygame.init()
 win = pygame.display.set_mode((500 + (4 * 4), 500 + (4 * 4)))
@@ -26,7 +24,7 @@ while run:
         x -= speed
     if keys[pygame.K_RIGHT] | keys[pygame.K_d] and x < 500 - width - 5:
         x += speed
-    if not (isJump):
+    if not isJump:
         if keys[pygame.K_UP] | keys[pygame.K_w] and y > 5:
             y -= speed
         if keys[pygame.K_DOWN] | keys[pygame.K_s] and y < 500 - height - 5:
@@ -47,5 +45,4 @@ while run:
     win.fill((0, 0, 0))
     pygame.draw.rect(win, (0, 204, 225), (x, y, width, height))
     pygame.display.update()
-
 pygame.quit()

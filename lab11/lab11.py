@@ -1,4 +1,3 @@
-import os
 import pygame
 
 pygame.init()
@@ -20,7 +19,6 @@ walkleft = [pygame.image.load('l1.png'), pygame.image.load('l2.png'), pygame.ima
             pygame.image.load('l16.png'), pygame.image.load('l17.png'), pygame.image.load('l18.png'), ]
 
 playerStand = pygame.image.load('idle.png')
-
 background = pygame.image.load("bg.png")
 
 clock = pygame.time.Clock()
@@ -78,11 +76,7 @@ while run:
         left = False
         right = False
         animCount = 0
-    if not (isJump):
-        # if keys[pygame.K_UP] | keys[pygame.K_w] and y > 5:
-        #    y -= speed
-        # if keys[pygame.K_DOWN] | keys[pygame.K_s] and y < 500 - height - 5:
-        #    y += speed
+    if not isJump:
         if keys[pygame.K_SPACE]:
             isJump = True
     else:
